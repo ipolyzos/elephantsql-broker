@@ -1,0 +1,13 @@
+---
+applications:
+- name: elephantsql-broker
+  memory: 1G
+  instances: 1
+  path: target/elephantsql-broker-0.0.1-SNAPSHOT.jar
+  random-route: false
+  services:
+    - celesq-mongodb
+  env:
+      ELEPHANTSQL_API_URL: "https://customer.elephantsql.com/api"
+      ELEPHANTSQL_API_KEY: "XXX-XXX-XXX-XXX-XXX"
+      ELEPHANTSQL_REGION: "amazon-web-services::eu-west-1"

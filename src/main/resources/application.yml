@@ -1,0 +1,112 @@
+---
+spring:
+  profiles: cloud
+
+catalog:
+  services:
+    - id: elephantsql
+      name: elephantsql
+      description: PostgreSQL as a Service
+      bindable: true
+      plan-updatable: true
+      tags:
+        - postgresql
+        - database
+        - relational
+      service-settings:
+        service-type: postgresql
+      metadata:
+        displayName: ElephantSQL
+        imageUrl: https://www.handybackup.net/images/icons/postgresql-backup.png
+        longDescription: The most advanced open-source database, hosted in the cloud.
+        providerDisplayName: ElephantSQL
+        documentationUrl: https://github.com/ipolyzos/elephantsql-broker
+        supportUrl: http://www.elephantsql.com/support.html
+      plans:
+        - id: turtle_6e40f9363d544784bc833217583bd83c
+          name: Tiny Turtle
+          description: For Development
+          service-settings:
+            quota:
+              limit: 3
+              warn: 2
+          free: true
+          metadata:
+            costs:
+              - amount:
+                  usd: 0.0
+                unit: MONTHLY
+            bullets:
+              - Shared high performance cluster
+              - 20MB data
+              - 5 concurrent connections
+        - id: panda_5ab89b21143e4a8cb79b740a4172dd2d
+          name: Pretty Panda
+          description: For Hobby Apps
+          service-settings:
+            quota:
+              limit: 5
+              warn: 4
+          metadata:
+            costs:
+              - amount:
+                  usd: 19.0
+                unit: MONTHLY
+            bullets:
+              - Shared high performance cluster
+              - 2GB data
+              - 20 concurrent connections
+        - id: hippo_b9e34eb7a3244b609d0e2592a62ecf0d
+          name: Happy Hippo
+          description: 1 node
+          service-settings:
+            quota:
+              limit: 5
+              warn: 4
+          metadata:
+            costs:
+              - amount:
+                  usd: 99.0
+                unit: MONTHLY
+            bullets:
+              - Dedicated Server
+              - 2GB Ram
+              - 1 core
+              - 100GB data
+              - 300 concurrent connections
+        - id: elephant_853723fe6321450c9f82-52bee05aeb44
+          name: Enormous Elephant
+          description: 1 node
+          service-settings:
+            quota:
+              limit: 5
+              warn: 4
+          metadata:
+            costs:
+              - amount:
+                  usd: 499.0
+                unit: MONTHLY
+            bullets:
+              - Dedicated Server
+              - 7.5GB Ram
+              - 2 cores
+              - 1000GB data
+              - 500 concurrent connections
+        - id: pigeon_3e02f991d7f743c5853f0bc94ab34143
+          name: Puffy Pigeon
+          description: 1 node
+          service-settings:
+            quota:
+              limit: 5
+              warn: 4
+          metadata:
+            costs:
+              - amount:
+                  usd: 999.0
+                unit: MONTHLY
+            bullets:
+              - Dedicated Server
+              - 15GB Ram
+              - 4 cores
+              - 1000GB data
+              - 500 concurrent connections

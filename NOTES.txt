@@ -1,0 +1,5 @@
+mvn clean install -DskipTests
+
+cf push
+cf create-service-broker elephantsql admin P455w0rd https://elephantsql-broker.run.staging.paas.misys.net
+cf enable-service-access elephantsql
